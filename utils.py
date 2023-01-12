@@ -129,3 +129,5 @@ def smooth_CE(logits, label, peak):
 	loss = torch.mean(-torch.sum(ce, -1))  # batch average
 
 	return loss
+
+
