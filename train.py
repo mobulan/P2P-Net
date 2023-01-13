@@ -29,9 +29,11 @@ def train():
 
 	## Data
 	data_config = {"air": [100, "../Data/fgvc-aircraft-2013b"],
-	               "car": [196, "../Data/stanford_cars"],
+	               # "car": [196, "../Data/stanford_cars"],
+	               "car": [196, "/data/datasets/fine-grained/cars"],
 	               "dog": [120, "../Data/StanfordDogs"],
-	               "cub": [200, "../Data/CUB_200_2011"],
+	               # "cub": [200, "D:\\Experiment\\Datasets\\CUB_200_2011\\CUB_200_2011"],
+	               "cub": [200, "/DATA/meiyiming/ly/dataset/CUB_200_2011/CUB_200_2011"],
 	               }
 	dataset_name = args.dataset_name
 	classes_num, data_root = data_config[dataset_name]
@@ -47,7 +49,7 @@ def train():
 	elif dataset_name == 'cub':
 		trainset = CUB(root=data_root, is_train=True, data_len=None)
 		testset = CUB(root=data_root, is_train=False, data_len=None)
-	num_workers = 16 if torch.cuda.is_available() else 0
+	num_workers = 0 if torch.cuda.is_available() else 0
 	trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=num_workers,
 	                                          drop_last=False)
 

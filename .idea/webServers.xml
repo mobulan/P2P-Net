@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="728adbed-789c-43d4-a87a-f7f3964c9bbc" name="P2PLab">
+        <fileTransfer rootFolder="/data/mobulan/P2P-Net" accessType="SFTP" host="172.19.4.78" port="22" sshConfigId="1dac7a6f-00aa-44d0-b0d8-fa0a2e5a181d" sshConfig="Lab">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="bcb01713-b9c1-4c9a-ae45-bcef0a52fb25" name="P2P179">
+        <fileTransfer rootFolder="/DATA/meiyiming/Mobulan/P2P-Net" accessType="SFTP" host="210.45.215.179" port="22" sshConfigId="7654a8a4-0e23-4b6f-8eb0-1fca24284c81" sshConfig="179">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+    <groups>
+      <group>
+        <name>P2P</name>
+        <servers>
+          <name value="P2PLab" />
+          <name value="P2P179" />
+        </servers>
+      </group>
+    </groups>
+  </component>
+</project>
